@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeAlpha Calculator — Task 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon">±</div>
+        <div>
+          <h1>CodeAlpha Calculator</h1>
+          <p>Frontend Development Internship • Task 2</p>
+        </div>
+      </div>
+      <button id="toggleThemeBtn" class="theme-btn" type="button">
+        <span id="themeIcon">☀️</span>
+        <span id="themeText">Light Mode</span>
+      </button>
+    </header>
+
+    <main class="workspace">
+      <section class="calculator-card">
+        <div class="display-screen">
+          <div class="display-top">
+            <span id="statusBadge" class="status-badge">Keyboard Active</span>
+            <button id="copyResultBtn" type="button" class="copy-btn">Copy</button>
+          </div>
+          <div id="expressionDisplay" class="expression-display">0</div>
+          <div id="mainDisplay" class="main-display">0</div>
+          <div id="livePreviewDisplay" class="live-preview">&nbsp;</div>
+        </div>
+
+        <div id="keypad" class="keypad">
+          <button type="button" data-action="clear" class="calc-btn btn-danger">AC</button>
+          <button type="button" data-action="delete" class="calc-btn btn-secondary">DEL</button>
+          <button type="button" data-action="percent" class="calc-btn btn-secondary">%</button>
+          <button type="button" data-operator="/" class="calc-btn btn-operator">÷</button>
+
+          <button type="button" data-number="7" class="calc-btn">7</button>
+          <button type="button" data-number="8" class="calc-btn">8</button>
+          <button type="button" data-number="9" class="calc-btn">9</button>
+          <button type="button" data-operator="*" class="calc-btn btn-operator">×</button>
+
+          <button type="button" data-number="4" class="calc-btn">4</button>
+          <button type="button" data-number="5" class="calc-btn">5</button>
+          <button type="button" data-number="6" class="calc-btn">6</button>
+          <button type="button" data-operator="-" class="calc-btn btn-operator">−</button>
+
+          <button type="button" data-number="1" class="calc-btn">1</button>
+          <button type="button" data-number="2" class="calc-btn">2</button>
+          <button type="button" data-number="3" class="calc-btn">3</button>
+          <button type="button" data-operator="+" class="calc-btn btn-operator">+</button>
+
+          <button type="button" data-action="negate" class="calc-btn">±</button>
+          <button type="button" data-number="0" class="calc-btn">0</button>
+          <button type="button" data-action="decimal" class="calc-btn">.</button>
+          <button type="button" data-action="equals" class="calc-btn btn-equals">=</button>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="panel-card history-card">
+          <div class="panel-header">
+            <h2>Calculation History</h2>
+            <button id="clearHistoryBtn" type="button" class="clear-btn">Clear All</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty-state">No calculations yet.</p>
+          </div>
+        </div>
+
+        <div class="panel-card shortcuts-card">
+          <h2>Bonus: Keyboard Shortcuts</h2>
+          <ul class="shortcuts-list">
+            <li><span>Numbers</span><kbd>0 – 9</kbd></li>
+            <li><span>Operators</span><kbd>+ - * /</kbd></li>
+            <li><span>Equals</span><kbd>Enter / =</kbd></li>
+            <li><span>Delete</span><kbd>Backspace</kbd></li>
+            <li><span>Clear Screen</span><kbd>Esc / C</kbd></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
